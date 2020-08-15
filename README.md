@@ -43,7 +43,8 @@ Bonus functionality:
 Original look ("pylone.fdf" map):  
 ![Screenshot from 2020-08-15 14-43-44](https://user-images.githubusercontent.com/48802453/90311670-3af2a600-df06-11ea-9dba-8533ac3a131e.png)
   
-1) Shifting location (using arrow keys)  
+1) Shifting location (using arrow keys):  
+  
 ![Screenshot from 2020-08-15 14-43-51](https://user-images.githubusercontent.com/48802453/90311672-3c23d300-df06-11ea-8386-be4fafbba77e.png)
   
 2) Rotating:  
