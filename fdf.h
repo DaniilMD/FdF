@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   FdF.h                                              :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: openelop <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/30 19:45:23 by openelop          #+#    #+#             */
-/*   Updated: 2019/10/30 19:45:29 by openelop         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #ifndef FDF_H
 # define FDF_H
 # include "libft/libft.h"
@@ -19,6 +7,8 @@
 # include <sys/types.h>
 # include <mlx.h>
 # include <math.h>
+# include "keys.h"
+# include "linux_keys.h"
 
 # define WINDOW_WIDTH 1000
 # define WINDOW_HEIGHT 1000

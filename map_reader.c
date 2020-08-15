@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   map_reader.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: openelop <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/30 19:43:12 by openelop          #+#    #+#             */
-/*   Updated: 2019/10/30 19:43:17 by openelop         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "fdf.h"
 
 t_dot3d		**get_full_line(char *name)
@@ -22,6 +10,8 @@ t_dot3d		**get_full_line(char *name)
 
 	full_line = ft_strnew(1);
 	fd = open(name, O_RDONLY);
+	if (fd < 0)
+		return (NULL);
 	while (get_next_line(fd, &line) == 1)
 	{
 		tmp = ft_strjoin(full_line, line);
@@ -32,6 +22,8 @@ t_dot3d		**get_full_line(char *name)
 		full_line = tmp;
 		free(line);
 	}
+	if (ft_strlen(full_line) < 1)
+		return (NULL);
 	map_nums = split_more(ft_strsplit(full_line, '\n'));
 	free(full_line);
 	return (map_nums);

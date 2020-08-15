@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   FdF.c                                              :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: openelop <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/30 19:45:34 by openelop          #+#    #+#             */
-/*   Updated: 2019/10/30 19:45:39 by openelop         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "fdf.h"
 
 t_dot3d	coord_creator(t_dot3d dot, double x, double y, double z)
@@ -128,7 +116,10 @@ int		main(int argc, char **argv)
 	param.m_change = change_coords(param.m_change, -0.68, 0, 0);
 	param.m_change = start_coeff_counter(param.m_change);
 	map_drawer(param.m_change, param);
-	mlx_hook(param.win_ptr, 2, 2, &key_press_down, (void*)&param);
+	// mlx_hook(param.win_ptr, 2, 2, &key_press_down, (void*)&param);
+
+	mlx_hook(param.win_ptr, 2, 1L << 0, &key_press_down, (void*)&param);
+
 	mlx_loop(param.mlx_ptr);
 	return (0);
 }
